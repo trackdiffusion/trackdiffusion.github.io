@@ -33,6 +33,55 @@
   <link rel="stylesheet" href="./static/css/image_card_slider.css">
 
   <style>
+    .media-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .media-item {
+      flex: 0 0 auto;
+      margin: 10px;
+      max-width: 27%;
+    }
+
+    .media-item img,
+    .media-item video {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .video-title {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .video-title span {
+      position: absolute;
+      top: 10px;
+      padding: 5px 10px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-size: 10px;
+    }
+
+    .video-title span:nth-child(1) {
+      left: 0;
+    }
+
+    .video-title span:nth-child(2) {
+      left: 28.7%;
+    }
+
+    .video-title span:nth-child(3) {
+      left: 57.0%;
+    }
+
     /* Flexbox布局 */
     .gif-display-container {
       display: flex;
@@ -53,6 +102,7 @@
     }
 
     .video-block {
+      position: relative;
       flex-basis: 30%;
       /* 每个video-block占行宽的大约一半，留下一些空间防止挤压 */
       margin: 0 1%;
@@ -149,6 +199,11 @@
 
       <div class="video-block">
         <div class="gif-display-item">
+          <div class="video-title">
+            <span>ModelScope</span>
+            <span>AnimateDiff</span>
+            <span>Ours</span>
+          </div>
           <video class="gif-display-img" muted preload="auto" playsinline autoplay loop height="100%">
             <source src="./static/videos/demo6.mp4" type="video/mp4">
           </video>
@@ -160,6 +215,11 @@
 
       <div class="video-block">
         <div class="gif-display-item">
+          <div class="video-title">
+            <span>ModelScope</span>
+            <span>AnimateDiff</span>
+            <span>Ours</span>
+          </div>
           <video class="gif-display-img" muted preload="auto" playsinline autoplay loop height="100%">
             <source src="./static/videos/demo2.mp4" type="video/mp4">
           </video>
@@ -173,6 +233,11 @@
     <div class="gif-display-container">
       <div class="video-block">
         <div class="gif-display-item">
+          <div class="video-title">
+            <span>ModelScope</span>
+            <span>AnimateDiff</span>
+            <span>Ours</span>
+          </div>
           <video class="gif-display-img" muted preload="auto" playsinline autoplay loop height="100%">
             <source src="./static/videos/demo3.mp4" type="video/mp4">
           </video>
@@ -182,31 +247,49 @@
 
       <div class="video-block">
         <div class="gif-display-item">
+          <div class="video-title">
+            <span>ModelScope</span>
+            <span>AnimateDiff</span>
+            <span>Ours</span>
+          </div>
           <video class="gif-display-img" muted preload="auto" playsinline autoplay loop height="100%">
             <source src="./static/videos/demo4.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="video-caption">A rocket rapidly ascends, <span class="highlight1">camera shakily tracking its path.</span></div>
+        <div class="video-caption">A rocket rapidly ascends, <span class="highlight1">camera shakily tracking its
+            path.</span></div>
       </div>
     </div>
 
     <div class="gif-display-container">
       <div class="video-block">
         <div class="gif-display-item">
+          <div class="video-title">
+            <span>ModelScope</span>
+            <span>AnimateDiff</span>
+            <span>Ours</span>
+          </div>
           <video class="gif-display-img" muted preload="auto" playsinline autoplay loop height="100%">
             <source src="./static/videos/demo1.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="video-caption">Two parrots playfully interact in a cage, <span class="highlight1">touching each other.</span></div>
+        <div class="video-caption">Two parrots playfully interact in a cage, <span class="highlight1">touching each
+            other.</span></div>
       </div>
 
       <div class="video-block">
         <div class="gif-display-item">
+          <div class="video-title">
+            <span>ModelScope</span>
+            <span>AnimateDiff</span>
+            <span>Ours</span>
+          </div>
           <video class="gif-display-img" muted preload="auto" playsinline autoplay loop height="100%">
             <source src="./static/videos/demo5.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="video-caption">A large truck is winding its way <span class="highlight1">along a twisting mountain road.</span></div>
+        <div class="video-caption">A large truck is winding its way <span class="highlight1">along a twisting mountain
+            road.</span></div>
       </div>
     </div>
 
